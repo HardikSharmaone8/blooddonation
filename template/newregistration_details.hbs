@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+     <link rel="stylesheet" href="css/donorreg.css" />
+    <title>New Registration Donors Details</title>
+    <style>
+
+        body{
+                background: url("../img/bloodlogin.jpg");
+                 background-repeat: no-repeat;
+                background-size: cover;
+                    width: 100%;
+                    padding: 0;
+                margin: auto;
+                display: flex;
+                flex-direction: column;
+                height: 100vh;
+                overflow: auto; 
+
+        }
+        #newregistration_container {
+            width: 70%;
+            height: 400px;
+            border: 3px solid rgba(66, 245, 221);
+            margin: auto;
+            margin-top: 100px;
+            display: flex;
+            box-sizing: border-box;
+            padding: 20px;
+            border-radius: 5px;
+            color:white;
+        }
+        
+        #newregistration_name,
+        #newregistration_fathername {
+            width: 30%;
+            height:200px;
+            border: 1px solid red;
+            color: gold;
+            font-size: 20px;
+            font-weight: bold;
+            text-align: center;
+        }
+        
+        #newregistration_phone {
+            width: 25%;
+            height: 200px;
+            border: 1px solid red;
+            color:white;
+            font-size: 22px;
+            font-weight: bold;
+            text-align: center;
+        }
+    </style>
+</head>
+
+
+<body>
+    {{>header}}
+    <div id="newregistration_container">
+      <div id="newregistration_name">{{name}}</div>
+        <div id="newregistration_fathername">{{fathername}}</div>
+        <div id="newregistration_phone">{{phone}}</div> 
+       
+    </div>
+    {{>footer}}
+</body>
+
+</html>

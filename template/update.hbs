@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <link rel="stylesheet" href="../css/donorreg.css" />
+    <title>Update donor Details</title>
+    <style>
+        body {
+            background: url("../img/bloodlogin.jpg");
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+            width: 100%;
+            padding: 0;
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            height: auto;
+            overflow: auto;
+        }
+        
+        #searchsubmit {
+            height: 30px;
+            width: 100px;
+            height: 36px;
+            background: linear-gradient(to left, purple, gold);
+            border-radius: 5px;
+            box-sizing: border-box;
+            font-size: 20px;
+            font-weight: bold;
+            cursor: pointer;
+            text-align: center;
+            padding-top: 3px;
+            margin: 11px 30px 0px 10px;
+        }
+        
+        label {
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    {{>header}}
+
+<div style="margin-top:15px;margin-left:170px;">
+    <form action="/update" method="post">
+
+            <div style="display:flex; margin-bottom:16px;">
+                <label>Phone Number*</label>
+                <input type="number" class="inputphone" name="newphonenumber" placeholder="Phone Number" value="{{phone}}" />
+
+            </div>
+
+
+            <div style="display:flex; margin-bottom:16px;">
+                <label>Name*</label>
+                <input type="text" class="inputname" name="name" value="{{name}}" placeholder="Name" />
+
+            </div>
+
+            <div style="display:flex; margin-bottom:16px;">
+                <label id="relation">Father Name*</label>
+                <input type="text" class="inputfather" name="fathername" value="{{fathername}}" placeholder="Father Name" />
+            </div>
+
+             <div style="display:flex; margin-bottom:16px;">
+                    <label>Date Of Birth*</label>
+                    <input type="number" style="width:50px; margin-right:15px;" class="inputdate" id="birthdate"  name="date" value="{{date}}" placeholder="dd" required />
+                     <input type="number"  style="width:60px;  margin-right:15px;" class="inputdate" id="birthmonth" name="month" value="{{month}}" placeholder="mm" required />
+                      <input type="number"  style="width:80px;" class="inputdate" id="birthyear" name="year" value="{{year}}" placeholder="yyyy" required />
+                </div>
+            <div style="display:flex; margin-bottom:16px;">
+                <label>Age*</label>
+                <input type="text" class="inputage" name="age" value="{{age}}" placeholder="Age" />
+            </div>
+
+            <div style="display:flex; margin-bottom:16px;">
+                <label>Address*</label>
+                <input type="text" class="inputaddress" name="Address" value="{{address}}" placeholder="Address" id="address" />
+            </div>
+            
+            <div style="display:flex; margin-bottom:16px;">
+                <label>City*</label>
+                <input type="text" class="inputcity" name="city" value="{{city}}" placeholder="City" />
+            </div>
+
+            <div style="display:flex; margin-bottom:16px;">
+                <label>District*</label>
+                <input type="text" class="inputdistrict" name="district" value="{{district}}" placeholder="District" />
+            
+            </div>
+
+            <div style="display:flex; margin-bottom:16px;">
+                <input style="margin:auto;" type="submit" id="print" value="Update" />
+            </div>
+
+        </form>
+ </div>
+    {{>footer}}
+</body>
+
+</html>

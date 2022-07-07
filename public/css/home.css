@@ -1,0 +1,186 @@
+body {
+    background: url("../img/donorinfo.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    width: 100%;
+    padding: 0;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    overflow: auto;
+}
+
+#header {
+    height: 60px;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.9);
+    box-sizing: border-box;
+    padding: 10px 20px;
+    display: flex;
+}
+
+.fa-droplet {
+    color: red;
+    font-size: 30px;
+    animation-name: heart;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+#reg_header {
+    margin-right: 350px;
+    font-size: 30px;
+    font-weight: bold;
+    box-sizing: border-box;
+    height: 60px;
+    width: 30%;
+}
+
+ul {
+    display: flex;
+    font-weight: bold;
+    list-style-type: none;
+}
+
+a {
+    margin-right: 15px;
+    font-size: 22px;
+    color: red;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+a:hover {
+    color: purple;
+}
+
+@keyframes heart {
+    from {
+        font-size: 10px;
+    }
+    to {
+        font-size: 30px;
+    }
+}
+
+#container {
+    height: 500px;
+    width: 70%;
+    margin: auto;
+    margin-left: 300px;
+    display: flex;
+    box-sizing: border-box;
+    padding: 120px 20px 90px 80px;
+}
+
+#quote {
+    font-weight: bold;
+    width: 30%;
+    margin-right: 20px;
+    margin-top: 30px;
+}
+
+h1 {
+    margin-top: -10px;
+}
+
+#image {
+    height: 220px;
+    width: 60%;
+    overflow: hidden;
+}
+
+#image_frame {
+    width: 5500px;
+    display: flex;
+    animation-name: img;
+    animation-duration: 80s;
+    animation-iteration-count: infinite;
+    position: relative;
+    transition: 5s;
+}
+
+img {
+    height: 220px;
+    width: 470px;
+}
+
+@keyframes img {
+    0% {
+        right: 0px;
+    }
+    0% {
+        right: 0px;
+    }
+    10% {
+        right: 470px;
+    }
+    10% {
+        right: 470px;
+    }
+    20% {
+        right: 940px;
+    }
+    20% {
+        right: 940px;
+    }
+    30% {
+        right: 1400px;
+    }
+    30% {
+        right: 1400px;
+    }
+    40% {
+        right: 1880px;
+    }
+    40% {
+        right: 1880px;
+    }
+    50% {
+        right: 2350px;
+    }
+    50% {
+        right: 2350px;
+    }
+    60% {
+        right: 2830px;
+    }
+    60% {
+        right: 2830px;
+    }
+    70% {
+        right: 3290px;
+    }
+    70% {
+        right: 3290px;
+    }
+    80% {
+        right: 3760px;
+    }
+    80% {
+        right: 3760px;
+    }
+}
+
+.fa-twitter-square,
+.fa-youtube,
+.fa-facebook,
+.fa-instagram-square {
+    font-size: 22px;
+    margin-left: 10px;
+    margin-top: 5px;
+    cursor: pointer;
+}
+
+#footer {
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    height: 60px;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.9);
+    box-sizing: border-box;
+    padding: 10px 20px;
+}
