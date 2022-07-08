@@ -75,12 +75,12 @@ app.post("/login", async(req, res) => {
             res.render("home");
         } else {
             res.status(500).render("error", {
-                ErrorText: "Please Check Your Password Details..",
+                ErrorText: "Please Check Your Login Details..",
             });
         }
     } catch (err) {
         res.status(500).render("error", {
-            ErrorText: "Please Check Your Login id.." + err,
+            ErrorText: "Please Check Your Login Details.." + err,
         });
     }
 });
