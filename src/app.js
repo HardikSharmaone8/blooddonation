@@ -80,7 +80,7 @@ app.post("/login", async(req, res) => {
         }
     } catch (err) {
         res.status(500).render("error", {
-            ErrorText: "Please Check Your Login id..",
+            ErrorText: "Please Check Your Login id.." + err,
         });
     }
 });
