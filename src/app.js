@@ -25,7 +25,7 @@ app.use(express.json()); //100
 app.use(cookieParser());
 hbs.registerPartials(partialPath);
 
-app.post("/register", auth, async(req, res) => {
+app.post("/register", async(req, res) => {
     try {
         var admindata = new Admin({
             Email: req.body.email,
@@ -49,7 +49,7 @@ app.post("/register", auth, async(req, res) => {
 });
 
 //when Admin login into this portal then he will be able to enter the new register id..otherwise page not found
-app.get("/register", auth, (req, res) => {
+app.get("/register", (req, res) => {
     res.render("adminreg");
 });
 
