@@ -325,7 +325,7 @@ app.get("/update/:Phone", auth, async(req, res) => {
             currentdate: finduser.CurrentDate,
         });
 
-        app.post("/update", auth, async(req, res) => {
+        app.post("/update", async(req, res) => {
             try {
                 var getDonor = await Donor.findOne({ Phone: finduser.Phone });
                 console.log("finding the phone number form the database:" + getDonor);
