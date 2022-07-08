@@ -170,7 +170,7 @@ app.post("/donor", async(req, res) => {
 
 //to count the donor donation in our camp
 
-app.get("/donor", auth, async(req, res) => {
+app.get("/donor", async(req, res) => {
     var obj = new Date("July 06 2022");
     var months = [
         "Jan",
