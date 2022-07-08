@@ -49,7 +49,7 @@ app.post("/register", async(req, res) => {
 });
 
 //when Admin login into this portal then he will be able to enter the new register id..otherwise page not found
-app.get("/register", (req, res) => {
+app.get("/register", auth, (req, res) => {
     res.render("adminreg");
 });
 
@@ -170,7 +170,7 @@ app.post("/donor", async(req, res) => {
 
 //to count the donor donation in our camp
 
-app.get("/donor", async(req, res) => {
+app.get("/donor", auth, async(req, res) => {
     var obj = new Date("July 06 2022");
     var months = [
         "Jan",
@@ -201,7 +201,7 @@ app.get("/donor", async(req, res) => {
 
     res.render("donorregistration", { new: totalReg.length });
 });
-app.get("/donor/:phone", async(req, res) => {
+app.get("/donor/:phone", auth, async(req, res) => {
     var phoneNumber = req.params.phone;
     var verifyUser = await Donor.findOne({ Phone: phoneNumber });
     res.send("Succressuly found that user:" + verifyUser);
