@@ -348,6 +348,8 @@ app.get("/update/:Phone", auth, async(req, res) => {
                     },
                 }, { new: true });
 
+                await result.save();
+
                 res.render("update");
             } catch (err) {
                 console.log("Erro ocure occure ocuure occure occurfe ocuure" + err);
