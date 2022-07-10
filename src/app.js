@@ -254,7 +254,7 @@ app.post("/verify", async(req, res) => {
                 address: checkUser.Address,
                 city: checkUser.City,
                 district: checkUser.District,
-                lastdonation: checkUser.Tokens[checkUser.__v.length - 1].date,
+                lastdonation: checkUser.Tokens[checkUser.__v - 1].date,
                 count: checkUser.Tokens.length,
                 new: totalReg.length,
             });
@@ -278,7 +278,7 @@ app.post("/info", async(req, res) => {
         var checkPhone = await Donor.findOne({ Phone: phoneNumber });
         console.log("Node Found the Id" + checkPhone);
         res.render("search", {
-            lastdonation: checkPhone.Tokens[checkPhone.__v.length - 1].date,
+            lastdonation: checkPhone.Tokens[checkPhone.__v - 1].date,
             phone: checkPhone.Phone,
             name: checkPhone.Name,
             fathername: checkPhone.FatherName,
