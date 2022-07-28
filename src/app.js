@@ -350,8 +350,9 @@ app.get("/update/:Phone", auth, async(req, res) => {
                         CurrentDate: req.body.currentdate,
                     },
                 }, { new: true });
-
-                res.render("update");
+                setTimeout(() => {
+                    res.render("update");
+                }, 2000);
             } catch (err) {
                 console.log("Erro ocure occure ocuure occure occurfe ocuure" + err);
             }

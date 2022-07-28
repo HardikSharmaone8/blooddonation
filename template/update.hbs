@@ -104,6 +104,16 @@
         </form>
  </div>
     {{>footer}}
+    <script>
+document.getElementById("print").addEventListener("click", () => {
+    swal({
+        title: "Success",
+        text: "Data Successfully saved into the Database",
+        icon: "success",
+    });
+});
+
+    </script>
 </body>
 
 </html>
