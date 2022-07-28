@@ -145,23 +145,26 @@ app.post("/donor", async(req, res) => {
             "Nov",
             "Dec",
         ];
+
         var getDate = `${obj.getDate()}${
       months[obj.getMonth()]
     },${obj.getFullYear()}`;
 
-        res.status(200).render("donorregistration", {
-            phone: donorsdata.Phone,
-            name: donorsdata.Name,
-            fathername: donorsdata.FatherName,
-            date: donorsdata.DateOfBirth[0].dd,
-            month: donorsdata.DateOfBirth[0].mm,
-            year: donorsdata.DateOfBirth[0].yy,
-            age: donorsdata.Age,
-            address: donorsdata.Address,
-            city: donorsdata.City,
-            district: donorsdata.District,
-            count: donorsdata.Tokens.length,
-        });
+        setTimeout(function() {
+            res.status(200).render("donorregistration", {
+                phone: donorsdata.Phone,
+                name: donorsdata.Name,
+                fathername: donorsdata.FatherName,
+                date: donorsdata.DateOfBirth[0].dd,
+                month: donorsdata.DateOfBirth[0].mm,
+                year: donorsdata.DateOfBirth[0].yy,
+                age: donorsdata.Age,
+                address: donorsdata.Address,
+                city: donorsdata.City,
+                district: donorsdata.District,
+                count: donorsdata.Tokens.length,
+            });
+        }, 2000);
     } catch (err) {
         console.log(`Donor data add into database error: ${err}`);
         res.send(`Donor data add into database error: ${err}`);

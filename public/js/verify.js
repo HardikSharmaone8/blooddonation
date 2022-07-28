@@ -99,6 +99,15 @@ document.getElementById("birthyear").addEventListener("change", () => {
     document.getElementById("age").value = `${getyear}`;
 });
 
+//to show the sweet alert to the admin when click on save button
+docuemnt.getElementById("print").addEventListener("click", () => {
+    swal({
+        title: "Success",
+        text: "Data Successfully saved into the Database",
+        icon: "success",
+    });
+});
+
 //to print the desire page
 function myPrint(myfrm) {
     var printdata = document.getElementById("myfrm");
