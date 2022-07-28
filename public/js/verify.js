@@ -100,7 +100,7 @@ document.getElementById("birthyear").addEventListener("change", () => {
 });
 
 //to show the sweet alert to the admin when click on save button
-docuemnt.getElementById("print").addEventListener("click", () => {
+document.getElementById("print").addEventListener("click", () => {
     swal({
         title: "Success",
         text: "Data Successfully saved into the Database",
