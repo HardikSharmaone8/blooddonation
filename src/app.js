@@ -130,23 +130,6 @@ app.post("/donor", async(req, res) => {
         var donor = await donorsdata.save();
         console.log("donor registriaon output: " + donor);
 
-        if (donordata.Phone != null) {
-            document.getElementById("print").addEventListener("click", () => {
-                swal({
-                    title: "Success",
-                    text: "Data Successfully saved into the Database",
-                    icon: "success",
-                });
-            });
-        } else {
-            swal({
-                title: "Information",
-                text: "Pleas fill the Correct Email Address",
-                icon: "error",
-                customClass: "swal-wide",
-            });
-        }
-
         var obj = new Date("July 6 2022");
         var months = [
             "Jan",
