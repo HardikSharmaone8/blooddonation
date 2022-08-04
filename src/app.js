@@ -44,7 +44,7 @@ app.post("/register", async(req, res) => {
         res.render("login");
     } catch (err) {
         res.send(err);
-        console.logg(err);
+        console.log(err);
     }
 });
 
@@ -167,7 +167,8 @@ app.post("/donor", async(req, res) => {
         }, 2000);
     } catch (err) {
         console.log(`Donor data add into database error: ${err}`);
-        res.send(`Donor data add into database error: ${err}`);
+        `<h1 style="color:red;">This Phone Number Already Available in our Database</h1>
+            <center><a href="/donor"style="text-decoration:none;height:40px;width:140px;background:linear-gradient(to left,gold,purple);border-radius:5px;display:block;color:white;font-size:22px;font-weight:bold;padding-top:8px;box-sizing:border-box;">Register</a></center>`;
     }
 });
 
