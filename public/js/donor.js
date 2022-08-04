@@ -140,13 +140,13 @@ document.getElementById("birthyear").addEventListener("change", () => {
 });
 
 //to show the sweet alert to the admin when click on save button
-document.getElementById("print").addEventListener("click", () => {
-    swal({
-        title: "Success",
-        text: "Data Successfully saved into the Database",
-        icon: "success",
-    });
-});
+// document.getElementById("print").addEventListener("click", () => {
+//     swal({
+//         title: "Success",
+//         text: "Data Successfully saved into the Database",
+//         icon: "success",
+//     });
+// });
 
 //to show the print details to the admin
 function myPrint(myfrm) {
